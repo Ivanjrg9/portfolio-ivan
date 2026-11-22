@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iván Ramos Gamarra · Desarrollador web</title>
+  <meta name="description" content="Iván Ramos Gamarra, desarrollador web de Alicante. Estudiante de DAW. Sobre mí, experiencia, formación y proyectos.">
+  <meta name="theme-color" content="#050506">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23050506'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='15' font-weight='600' fill='%23fff' text-anchor='middle'%3EIR%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top">Iván Ramos</a>
+    <nav aria-label="Principal">
+      <ul class="nav__list">
+        <li class="nav__wide"><a href="#sobre-mi">Sobre mí</a></li>
+        <li class="nav__wide"><a href="#experiencia">Experiencia</a></li>
+        <li class="nav__wide"><a href="#formacion">Formación</a></li>
+        <li class="nav__wide"><a href="#proyectos">Proyectos</a></li>
+        <li><a class="btn" href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero__text">
+        <h1 class="hero__title">Desarrollador web<br>que crea webs para negocios reales</h1>
+        <p class="hero__lead">Soy Iván Ramos, de Alicante. Estudio Desarrollo de Aplicaciones Web y construyo páginas rápidas, claras y pensadas para quien las usa.</p>
+        <a class="btn" href="#proyectos">Ver mis proyectos</a>
+      </div>
+
+      <div class="earth" aria-hidden="true"><div class="earth__globe"></div></div>
+      <a class="hero__scroll" href="#sobre-mi" aria-label="Bajar a Sobre mí"><span>Scroll</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+    </section>
+
+    <section class="section" id="sobre-mi" aria-labelledby="sobre-title">
+      <p class="label">Quién soy</p>
+      <h2 class="statement" id="sobre-title">De una idea en un papel a una página que alguien usa de verdad.</h2>
+      <div class="about">
+        <figure class="about__photo">
+          <div class="shot" id="shot">
+            <img class="shot__img is-active" src="assets/ivan.jpg" alt="Iván Ramos en un mirador con montañas al fondo" width="1080" height="1350" loading="lazy">
+            <img class="shot__img" src="assets/ivan-cazorla.jpg" alt="Iván Ramos de noche en una calle de Cazorla" width="1080" height="1350" loading="lazy">
+            <div class="shot__color" aria-hidden="true"></div>
+            <div class="shot__scan" aria-hidden="true"></div>
+          </div>
+          <div class="shot__dots" id="shot-dots" role="group" aria-label="Elegir foto"></div>
+          <figcaption>38.35° N, 0.48° O<br>Alicante, España</figcaption>
+        </figure>
+        <div class="about__text">
+          <p>Soy de Alicante y estudio el ciclo superior de Desarrollo de Aplicaciones Web. He hecho webs para negocios reales, como la tienda <a href="https://carolt.es/" target="_blank" rel="noreferrer noopener">Carol T’</a> o la vinoteca <a href="https://www.aperitivosgisbert.com/" target="_blank" rel="noreferrer noopener">Aperitivos Gisbert</a>, y proyectos propios con Next.js, Astro, Java y Spring.</p>
+          <p>Antes de dedicarme al desarrollo trabajé en logística, hostelería y construcción. Ahí aprendí a ser constante, a trabajar en equipo y a mantener el ritmo cuando el trabajo aprieta, y esa misma actitud es la que aplico ahora a cada proyecto.</p>
+          <ul class="chips" aria-label="Tecnologías">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Astro</li><li>React</li><li>Next.js</li><li>Tailwind</li><li>Java</li><li>Spring</li><li>SQL</li><li>Docker</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experiencia" aria-labelledby="experiencia-title">
+      <p class="label">Experiencia</p>
+      <h2 class="statement" id="experiencia-title">Pasé por el almacén, la hostelería y la obra antes de llegar al código.</h2>
+      <ol class="rows">
+        <li class="row">
+          <span class="row__n" aria-hidden="true">01</span>
+          <div class="row__main">
+            <h3>Desarrollador web · <a class="row__link" href="https://ramostudio.es/" target="_blank" rel="noreferrer noopener">RamoStudio<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a></h3>
+            <p>Diseño, desarrollo y publicación de webs a medida para negocios locales: tiendas, vinotecas y servicios. Desde la primera propuesta hasta tener la web online.</p>
+          </div>
+          <p class="row__date">2026 — Presente</p>
+        </li>
+        <li class="row">
+          <span class="row__n" aria-hidden="true">02</span>
+          <div class="row__main">
+            <h3>Operario de almacén y logística · Musgrave España</h3>
+            <p>Almacén de distribución alimentaria: recepción, ubicación y preparación de pedidos. Manejo de traspaleta eléctrica, torito y montacargas, y reparto con camión de hasta 3.500 kg.</p>
+          </div>
+          <p class="row__date">Sep 2024 — Oct 2025</p>
+        </li>
+        <li class="row">
+          <span class="row__n" aria-hidden="true">03</span>
+          <div class="row__main">
+            <h3>Operario en hostelería · Grupo Zena Pizza</h3>
+            <p>Preparación de pedidos, atención al cliente, reparto a domicilio y gestión de caja en un entorno de alta rotación y ritmo exigente.</p>
+          </div>
+          <p class="row__date">Ago 2022 — Nov 2024</p>
+        </li>
+        <li class="row">
+          <span class="row__n" aria-hidden="true">04</span>
+          <div class="row__main">
+            <h3>Auxiliar en prevención y seguridad laboral · Segitec Seguridad y Salud</h3>
+            <p>Apoyo en trabajos relacionados con la seguridad y la salud en obra.</p>
+          </div>
+          <p class="row__date">Nov — Dic 2023</p>
+        </li>
+        <li class="row">
+          <span class="row__n" aria-hidden="true">05</span>
+          <div class="row__main">
+            <h3>Repartidor y ayudante en hostelería · Manmar e Hijos Pizza</h3>
+            <p>Reparto de comida a domicilio y apoyo en cocina y sala.</p>
+          </div>
+          <p class="row__date">Nov 2021 — Mar 2022</p>
+        </li>
+        <li class="row">
+          <span class="row__n" aria-hidden="true">06</span>
+          <div class="row__main">
+            <h3>Peón de construcción · Tabiques y Cubiertas Toledo</h3>
+            <p>Tabiquería, cubierta y obra civil. Manejo de materiales y herramientas, y apoyo a los oficiales.</p>
+          </div>
+          <p class="row__date">Nov 2020 — Jun 2021</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="formacion" aria-labelledby="formacion-title">
+      <p class="label">Formación</p>
+      <h2 class="statement" id="formacion-title">Aprendiendo desarrollo web de forma reglada y con proyectos reales.</h2>
+      <ol class="rows">
+        <li class="row">
+          <span class="row__n" aria-hidden="true">01</span>
+          <div class="row__main">
+            <h3>Técnico Superior en Desarrollo de Aplicaciones Web</h3>
+            <p>Ciclo superior de DAW, en curso. Programación en Java, desarrollo web en cliente y en servidor, despliegue de aplicaciones y bases de datos.</p>
+          </div>
+          <p class="row__date">2025 — Presente</p>
+        </li>
+        <li class="row">
+          <span class="row__n" aria-hidden="true">02</span>
+          <div class="row__main">
+            <h3>Prevención de Riesgos Laborales (20 h) · Fundación Laboral de la Construcción</h3>
+          </div>
+          <p class="row__date">2021</p>
+        </li>
+        <li class="row">
+          <span class="row__n" aria-hidden="true">03</span>
+          <div class="row__main">
+            <h3>Bachillerato y ESO</h3>
+          </div>
+          <p class="row__date">Completado</p>
+        </li>
+        <li class="row">
+          <span class="row__n" aria-hidden="true">04</span>
+          <div class="row__main">
+            <h3>Español nativo e inglés B1</h3>
+            <p>Carnets de conducir B y A2.</p>
+          </div>
+          <p class="row__date">Idiomas</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="proyectos" aria-labelledby="proyectos-title">
+      <p class="label">Proyectos</p>
+      <h2 class="statement" id="proyectos-title">Webs para negocios reales y proyectos propios.</h2>
+      <div class="projects">
+        <ol class="proj-list" id="proj-list">
+          <li class="proj" data-url="https://carolt.es/" data-title="Carol T’">
+            <a class="proj__row" href="https://carolt.es/" target="_blank" rel="noreferrer noopener" aria-label="Carol T’: visitar la web (se abre en una pestaña nueva)">
+              <span class="proj__n" aria-hidden="true">01</span>
+              <span class="proj__name">Carol T’</span>
+              <span class="proj__desc">Tienda online de ropa, bolsos y bisutería de Alicante, con catálogo y compra por WhatsApp.</span>
+              <span class="proj__tags">React · Vite · Tailwind · Cloudflare Pages</span>
+            </a>
+            <img class="proj__img" src="assets/carol-t.jpg" alt="Captura de la web de Carol T’" width="1280" height="4200" loading="lazy">
+          </li>
+          <li class="proj" data-url="https://www.aperitivosgisbert.com/" data-title="Aperitivos Gisbert">
+            <a class="proj__row" href="https://www.aperitivosgisbert.com/" target="_blank" rel="noreferrer noopener" aria-label="Aperitivos Gisbert: visitar la web (se abre en una pestaña nueva)">
+              <span class="proj__n" aria-hidden="true">02</span>
+              <span class="proj__name">Aperitivos Gisbert</span>
+              <span class="proj__desc">Web de una vinoteca de Alicante con cestas de regalo y vinos D.O.P. Catálogo sin precios y botón directo a WhatsApp.</span>
+              <span class="proj__tags">HTML · CSS · JavaScript</span>
+            </a>
+            <img class="proj__img" src="assets/aperitivos-gisbert.jpg" alt="Captura de la web de Aperitivos Gisbert" width="1280" height="800" loading="lazy">
+          </li>
+          <li class="proj" data-url="https://github.com/Ivanjrg9/comisionate" data-title="ComisionaTe">
+            <a class="proj__row" href="https://github.com/Ivanjrg9/comisionate" target="_blank" rel="noreferrer noopener" aria-label="ComisionaTe: ver el código en GitHub (se abre en una pestaña nueva)">
+              <span class="proj__n" aria-hidden="true">03</span>
+              <span class="proj__name">ComisionaTe</span>
+              <span class="proj__desc">Plataforma web que conecta a empresas de placas solares con comerciales a comisión. Proyecto propio con autenticación y base de datos.</span>
+              <span class="proj__tags">Next.js · TypeScript · Supabase</span>
+            </a>
+            <img class="proj__img" src="assets/comisionate.jpg" alt="Captura de la portada de ComisionaTe" width="1280" height="800" loading="lazy">
+          </li>
+          <li class="proj" data-url="" data-title="Ohm Electricistas">
+            <div class="proj__row">
+              <span class="proj__n" aria-hidden="true">04</span>
+              <span class="proj__name">Ohm Electricistas</span>
+              <span class="proj__desc">Web para un electricista autorizado de Alicante: urgencias, boletines y presupuesto por WhatsApp.</span>
+              <span class="proj__tags">Astro · Tailwind</span>
+            </div>
+            <img class="proj__img" src="assets/ohm-electricistas.jpg" alt="Captura de la web de Ohm Electricistas" width="1280" height="4200" loading="lazy">
+          </li>
+        </ol>
+
+        <a class="preview" id="preview" aria-hidden="true" tabindex="-1" target="_blank" rel="noreferrer noopener">
+          <img src="assets/carol-t.jpg" alt="" width="1280" height="4200">
+        </a>
+      </div>
+
+      <aside class="promo" aria-labelledby="promo-title">
+        <p class="label">RamoStudio</p>
+        <h3 class="promo__title" id="promo-title">¿Necesitas una web para tu negocio?</h3>
+        <p class="promo__text">Las webs de arriba son una muestra de mi trabajo. Desde RamoStudio hago páginas a medida para negocios y emprendedores.</p>
+        <a class="btn" href="https://ramostudio.es/" target="_blank" rel="noreferrer noopener">Ir a RamoStudio<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      </aside>
+    </section>
+
+    <section class="contact" id="contacto" aria-labelledby="contacto-title">
+      <p class="label">Contacto</p>
+      <h2 class="contact__title" id="contacto-title">¿Hablamos?</h2>
+      <p class="contact__lead">Si quieres saber más de mí o de mis proyectos, escríbeme.</p>
+      <a class="contact__mail" href="mailto:contactoivan00@gmail.com">contactoivan00@gmail.com</a>
+      <ul class="contact__social">
+        <li><a class="btn" href="https://www.linkedin.com/in/ivan-ramos-gamarra-438559402/" target="_blank" rel="noreferrer noopener">LinkedIn</a></li>
+        <li><a class="btn" href="https://github.com/Ivanjrg9" target="_blank" rel="noreferrer noopener">GitHub</a></li>
+        <li><a class="btn" href="https://www.instagram.com/ivan_jrg9/" target="_blank" rel="noreferrer noopener">Instagram</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> Iván Ramos Gamarra. Hecho a mano con HTML, CSS y JavaScript. Diseño inspirado en la plantilla «Tech Website Dark Theme» de Prasad Lakhara. Imagen de la Tierra: NASA Earth Observatory, «Black Marble», dominio público.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
