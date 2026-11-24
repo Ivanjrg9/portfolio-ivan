@@ -87,8 +87,8 @@
     live.add(a);
     return a;
   }
-  function commitAll() { // cada transición parte de la pose exacta en que se quedó la anterior
-    live.forEach((a) => { try { a.commitStyles(); } catch (e) { /* elemento oculto */ } a.cancel(); });
+  function cancelAll() { // el estado final de la entrada coincide con el CSS base, así que basta cancelar (commitStyles falla en Safari)
+    live.forEach((a) => a.cancel());
     live.clear();
   }
 
@@ -423,7 +423,7 @@
   }
 
   function done() {
-    commitAll(); controlled = true; measure(); lastP = -1;
+    cancelAll(); controlled = true; measure(); lastP = -1;
     document.documentElement.classList.remove('lock');
     apply();
     const t = location.hash && $(location.hash.slice(1));
