@@ -54,7 +54,6 @@
           </div>
         </div>
         <div class="slide__info">
-          <p class="slide__n"><b>${nn(k)}</b> / ${nn(works.length - 1)}</p>
           <p class="slide__type">${w.type}</p>
           <h3>${w.title}</h3>
           <p>${w.desc}</p>
@@ -269,6 +268,7 @@
     veil.style.opacity = c01((p - 0.5) / 0.5);
     embersCv.style.opacity = 1 - c01(p / 0.5);
     stage.classList.toggle('scrolled', p > 0.3);
+    stage.classList.toggle('gone', p >= 0.98);
     const cp = c01((p - 0.06) / 0.92);
     if (cache.ready && !reduce) {
       if (cp > 0.002) { if (!camOn) { camOn = true; stage.classList.add('cam-on'); } drawProgress(cp, dir); }
@@ -335,6 +335,52 @@
   }
   if (!reduce) embers();
 
+  /* ---------------------------------------------------------------- Contacto: chispas y bandas */
+  function footEmbers() {
+    const sec = $('contacto'), c = document.createElement('canvas');
+    c.className = 'ct-embers'; c.setAttribute('aria-hidden', 'true'); sec.prepend(c);
+    const x = c.getContext('2d');
+    let W = 0, H = 0, vis = false, raf = 0;
+    const P = [];
+    const size = () => { W = c.width = sec.clientWidth; H = c.height = sec.clientHeight; };
+    const spawn = (p, first) => {
+      p.x = Math.random() * W; p.y = first ? Math.random() * H : H + 10;
+      p.vy = -(0.25 + Math.random() * 0.6); p.vx = (Math.random() - 0.5) * 0.25;
+      p.r = 0.6 + Math.random() * 1.2; p.ph = Math.random() * 6.28;
+      return p;
+    };
+    size(); addEventListener('resize', size);
+    for (let i = 0; i < 36; i++) P.push(spawn({}, true));
+    function tick() {
+      if (!vis) { raf = 0; return; }
+      x.clearRect(0, 0, W, H);
+      x.globalCompositeOperation = 'lighter';
+      for (const p of P) {
+        p.ph += 0.03; p.x += p.vx + Math.sin(p.ph) * 0.3; p.y += p.vy;
+        if (p.y < -10) { spawn(p, false); continue; }
+        const a = clamp(p.y / H, 0, 1) * 0.5, g = x.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 5);
+        g.addColorStop(0, `rgba(255,190,120,${a})`); g.addColorStop(0.35, `rgba(197,121,75,${a * 0.5})`); g.addColorStop(1, 'rgba(197,121,75,0)');
+        x.fillStyle = g; x.beginPath(); x.arc(p.x, p.y, p.r * 5, 0, 6.28); x.fill();
+      }
+      raf = requestAnimationFrame(tick);
+    }
+    new IntersectionObserver((en) => { vis = en[0].isIntersecting; if (vis && !raf) { size(); raf = requestAnimationFrame(tick); } }).observe(sec);
+  }
+  if (!reduce) footEmbers();
+  (function ghostLight() {
+    const g = $('ct-ghost'), sec = $('contacto');
+    const move = (e) => {
+      const r = g.getBoundingClientRect();
+      g.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      g.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      g.classList.add('lit');
+    };
+    sec.addEventListener('pointermove', move);
+    sec.addEventListener('pointerdown', move);
+    sec.addEventListener('pointerleave', () => g.classList.remove('lit'));
+    sec.addEventListener('pointerup', (e) => { if (e.pointerType !== 'mouse') g.classList.remove('lit'); });
+  })();
+
   /* ---------------------------------------------------------------- Carga */
   // La palabra gigante se ajusta para ocupar el ancho de la escena, sea cual sea su longitud
   function fitWord() {
@@ -344,7 +390,7 @@
     if (!w) return;
     const fs = 100 * (1180 * s) / w;
     stage.style.setProperty('--wfs', fs.toFixed(2));
-    stage.style.setProperty('--wtop', (600 - 0.834 * fs).toFixed(2));
+    stage.style.setProperty('--wtop', (625 - 0.834 * fs).toFixed(2));
   }
   addEventListener('resize', () => { fitWord(); });
 
